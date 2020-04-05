@@ -1,0 +1,11 @@
+-- set log level for loading file
+\set QUIET yes
+
+-- auto expand tables
+\x auto
+
+-- show special character for null
+\pset null ¤
+
+-- restore log level
+\unset QUIET

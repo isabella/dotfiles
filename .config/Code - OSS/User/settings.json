@@ -1,0 +1,125 @@
+{
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "buffy-language-server.trace.server": "messages",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.codeLens": false,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.exclude": {
+    "**/node_modules": true
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.enableCommitSigning": true,
+  "rust-analyzer.cargo-watch.command": "clippy",
+  "rust-analyzer.cargoFeatures.allFeatures": false,
+  "rust-analyzer.useClientWatching": true,
+  "vim.insertModeKeyBindings": [],
+  "vim.leader": ";",
+  "vim.normalModeKeyBindings": [
+    {
+      "after": [
+        "}"
+      ],
+      "before": [
+        "J"
+      ]
+    },
+    {
+      "after": [
+        "{"
+      ],
+      "before": [
+        "K"
+      ]
+    },
+    {
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
+    },
+    {
+      "before": [
+        "U"
+      ],
+      "commands": [
+        "redo"
+      ]
+    },
+  ],
+  "vim.sneak": true,
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindings": [
+    {
+      "after": [
+        "}"
+      ],
+      "before": [
+        "J"
+      ]
+    },
+    {
+      "after": [
+        "{"
+      ],
+      "before": [
+        "K"
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "p",
+        "g",
+        "v",
+        "y"
+      ],
+      "before": [
+        "p"
+      ]
+    }
+  ],
+  "window.menuBarVisibility": "toggle",
+  "window.zoomLevel": 0,
+  "workbench.activityBar.visible": false,
+  "workbench.colorTheme": "Tangram",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.startupEditor": "none",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "rust-analyzer.highlighting.semanticTokens": true,
+  "rust-analyzer.highlightingOn": true,
+  "rust-analyzer.inlayHints.typeHints": false,
+  "rust-analyzer.inlayHints.parameterHints": false,
+  "terminal.integrated.shell.linux": "/usr/bin/zsh"
+}
