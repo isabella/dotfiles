@@ -13,7 +13,7 @@ set $right l
 # bindsym $mod+Escape exec swaylock
 # exec swayidle -w \
 #    timeout 300 'swaylock --daemonize --font=JetBrains Mono --ignore-empty-password --image=~/wallpaper.png --indicator-x-position=2560 --indicator-y-position=2100'
-$    timeout 300 'sway "output * dpms off"' \
+#    timeout 300 'sway "output * dpms off"' \
 #         resume 'sway "output * dpms on"' \
 #
 # output DP-1 {
@@ -34,15 +34,19 @@ $    timeout 300 'sway "output * dpms off"' \
 # Quit i3
 bindsym $mod+q exec i3 exit
 
+# wallpaper
+exec feh --bg-scale --no-fehbg $HOME/wallpaper.png
+
 # lock
 bindsym $mod+Escape exec i3lock -u -i ~/wallpaper.png
 exec xautolock -time 1 -locker i3lock -u -i ~/wallpaper.png &
 
 default_border pixel
 
-#                       border  bg      text    indi      child
-client.focused          #000000 #000000 #000000 #0a84ff7f #0a84ff7f
-client.unfocused        #000000 #000000 #000000 #000000   #222222
+#                       border  bg      text    indi    child
+client.focused          #000000 #000000 #000000 #054280 #054280
+client.focused_inactive #000000 #000000 #000000 #000000 #333333
+client.unfocused        #000000 #000000 #000000 #000000 #333333
 
 bar {
   colors {
@@ -52,7 +56,7 @@ bar {
   }
   font pango:JetBrains Mono bold 32px
   position top
-  # status_command while echo hello; do sleep 1; done
+  status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
 }
 
 # open menu

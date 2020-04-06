@@ -72,7 +72,6 @@ export EDITOR="vim"
 export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
-export NODE_PATH=$HOME/.config/yarn/global/node_modules
 export PAGER="bat"
 export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$HOME/.yarn/bin:$PATH"
 export PGUSER=postgres
