@@ -36,11 +36,13 @@
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "git.enableCommitSigning": true,
-  "rust-analyzer.cargo-watch.command": "clippy",
-  "rust-analyzer.cargoFeatures.allFeatures": false,
-  "rust-analyzer.useClientWatching": true,
-  "vim.insertModeKeyBindings": [],
-  "vim.leader": ";",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "rust-analyzer.highlighting.semanticTokens": true,
+  "rust-analyzer.inlayHints.chainingHints": false,
+  "rust-analyzer.inlayHints.parameterHints": false,
+  "rust-analyzer.inlayHints.typeHints": false,
+  "terminal.integrated.shell.linux": "/usr/bin/zsh",
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.normalModeKeyBindings": [
     {
       "after": [
@@ -73,7 +75,7 @@
       "commands": [
         "redo"
       ]
-    },
+    }
   ],
   "vim.sneak": true,
   "vim.useSystemClipboard": true,
@@ -93,7 +95,7 @@
       "before": [
         "K"
       ]
-    },
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -114,12 +116,6 @@
   "workbench.colorTheme": "Tangram",
   "workbench.editor.enablePreview": false,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.startupEditor": "none",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "rust-analyzer.highlighting.semanticTokens": true,
-  "rust-analyzer.highlightingOn": true,
-  "rust-analyzer.inlayHints.typeHints": false,
-  "rust-analyzer.inlayHints.parameterHints": false,
-  "terminal.integrated.shell.linux": "/usr/bin/zsh"
+  "workbench.editor.showTabs": true,
+  "workbench.startupEditor": "none"
 }

@@ -97,7 +97,7 @@ source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
 # aliases
-alias dotfiles-git='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dotfiles='git --git-dir $HOME/.dotfiles --work-tree $HOME'
 alias rc='$EDITOR ~/.zshrc'
 alias src='source ~/.zshrc'
 alias d='trash'
@@ -138,7 +138,7 @@ alias gstl='git stash list'
 alias gstp='git stash pop --quiet'
 alias gsts='git stash show -p'
 alias sb='./scripts/build'
-alias sc='./scripts/clean'
+alias scl='./scripts/clean'
 alias sch='./scripts/check'
 alias sd='./scripts/dev'
 alias sf='./scripts/fmt'
