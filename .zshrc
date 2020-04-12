@@ -145,10 +145,6 @@ alias sf='./scripts/fmt'
 alias sl='./scripts/lint'
 alias st='./scripts/test'
 
-function myip() {
-	curl -sSL https://ipinfo.io/ | jq ''
-}
-
 function weather() {
 	curl -sSL http://wttr.in/$(echo "$@" | tr " " +)
 }
