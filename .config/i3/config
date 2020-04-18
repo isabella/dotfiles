@@ -8,25 +8,25 @@ set $right l
 
 # # Quit Sway
 # bindsym $mod+q exec swaymsg exit
-#
+# 
 # # lock
 # bindsym $mod+Escape exec swaylock
 # exec swayidle -w \
-#    timeout 300 'swaylock --daemonize --font=JetBrains Mono --ignore-empty-password --image=~/wallpaper.png --indicator-x-position=2560 --indicator-y-position=2100'
+#    timeout 300 'swaylock --daemonize --font=JetBrains Mono --ignore-empty-password --image=~/wallpaper.png --indicator-x-position=2560 --indicator-y-position=2100' \
 #    timeout 300 'sway "output * dpms off"' \
-#         resume 'sway "output * dpms on"' \
-#
+#         resume 'sway "output * dpms on"r
+# 
 # output DP-1 {
 #   resolution 5120x2880 scale 2
-#   background /home/nitsky/wallpaper.png fill
+#   # background /home/nitsky/wallpaper.png fill
 # }
-#
+# 
 # input type:touchpad {
 #   natural_scroll enabled
 #   pointer_accel 0.0
 #   scroll_factor 0.4
 # }
-#
+# 
 # input type:keyboard {
 #   xkb_options caps:escape
 # }
