@@ -4,6 +4,7 @@ email = david@yamnitsky.com
 
 [core]
 editor = vim
+pager = delta --theme="base16"
 
 [color]
 ui = auto
@@ -19,10 +20,3 @@ default = simple
 [diff]
 compactionHeuristic = true
 
-[pager]
-log = diff-so-fancy | less --tabs=2 -RFX
-show = diff-so-fancy | less --tabs=2 -RFX
-diff = diff-so-fancy | less --tabs=2 -RFX
-
-[interactive]
-diffFilter = diff-so-fancy | less --tabs=2 -RFX
