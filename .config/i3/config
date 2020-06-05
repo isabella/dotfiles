@@ -28,7 +28,7 @@ bindsym $mod+q exec i3 exit
 
 # lock
 bindsym $mod+Escape exec i3lock -c 000000
-exec xautolock -time 5 -locker "i3lock -c 000000"
+# exec xautolock -time 5 -locker "i3lock -c 000000"
 
 # open a new terminal on startup
 exec $term

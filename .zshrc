@@ -2,17 +2,17 @@
 autoload -U colors && colors
 PS1="%{$fg[blue]%}%c%{$reset_color%} %{$fg[red]%}$%{$reset_color%} "
 
-# allow C-s
+# enable binding of ^s
 stty -ixon
-
-# enable vi mode
-bindkey -v
 
 # enable binding of ^d
 setopt ignoreeof
 
-# enable binding of ^s and ^q
+# enable binding of ^q
 unsetopt flowcontrol
+
+# enable vi mode
+bindkey -v
 
 # ctrl-a to go to beginning of line
 # ctrl-e to go to end of line
@@ -74,6 +74,7 @@ export LESS="-R"
 export LESSHISTFILE=/dev/null
 export PAGER="bat"
 export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$HOME/.yarn/bin:$PATH"
+export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PGUSER=postgres
 
 # gpg
@@ -149,3 +150,4 @@ function cheat() {
 	curl -sSL http://cheat.sh/$(echo "$@" | tr " " +)
 }
 
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
