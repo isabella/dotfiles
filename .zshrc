@@ -1,15 +1,21 @@
 # prompt
 autoload -U colors && colors
-PS1="%{$fg[blue]%}%c%{$reset_color%} %{$fg[red]%}$%{$reset_color%} "
+PS1="%{$fg[green]%}%m%{$reset_color%} %{$fg[blue]%}%c%{$reset_color%} %{$fg[red]%}$%{$reset_color%} "
 
 # enable binding of ^s
 stty -ixon
 
 # enable binding of ^d
-setopt ignoreeof
+# setopt ignoreeof
 
 # enable binding of ^q
-unsetopt flowcontrol
+# unsetopt flowcontrol
+
+# ctrl d to interrupt
+stty intr \^d
+
+# ctrl q to eof
+stty eof \^q
 
 # enable vi mode
 bindkey -v
@@ -62,7 +68,7 @@ bindkey -M vicmd ^q exit_widget
 # history
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=$HOME/.zsh_history
+HISTFILE=$HOME/.zhistory
 setopt inc_append_history
 setopt share_history
 setopt extended_history
@@ -73,9 +79,12 @@ export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
 export PAGER="bat"
-export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PGUSER=postgres
+
+# conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # gpg
 gpg-agent --daemon &> /dev/null
@@ -149,5 +158,3 @@ function weather() {
 function cheat() {
 	curl -sSL http://cheat.sh/$(echo "$@" | tr " " +)
 }
-
-[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh

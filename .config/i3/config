@@ -1,3 +1,4 @@
+set $menu rofi -show run
 set $term alacritty
 set $mod mod4
 set $left h
@@ -33,6 +34,9 @@ bindsym $mod+Escape exec i3lock -c 000000
 # open a new terminal on startup
 exec $term
 
+# mod + enter to show menu
+bindsym $mod+Return exec $menu
+
 default_border pixel
 
 #                       border  bg      text    indi    child
@@ -60,8 +64,8 @@ bindsym $mod+b splith
 bindsym $mod+w kill
 
 # Audio control
-bindsym XF86AudioLowerVolume exec pamixer --decrease 10
-bindsym XF86AudioRaiseVolume exec pamixer --increase 10
+bindsym XF86AudioLowerVolume exec pamixer --decrease 5
+bindsym XF86AudioRaiseVolume exec pamixer --increase 5
 
 # Media control
 bindsym XF86AudioPlay exec playerctl play-pause
