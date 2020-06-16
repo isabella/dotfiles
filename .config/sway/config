@@ -1,4 +1,4 @@
-set $menu rofi -show run
+set $menu wofi --show run
 set $term alacritty
 set $mod mod4
 set $left h
@@ -29,6 +29,9 @@ exec swayidle -w \
 # open a new terminal on startup
 exec $term
 
+# start waybar on startup
+exec waybar
+
 # mod + enter to show menu
 bindsym $mod+Return exec $menu
 
@@ -44,18 +47,8 @@ client.focused_inactive #000000 #000000 #000000 #000000 #333333
 client.unfocused        #000000 #000000 #000000 #000000 #333333
 
 gaps {
+	outer 0
 	inner 2
-}
-
-bar {
-	colors {
-		background #222222
-		focused_workspace #333333 #333333 #bbbbbb
-		statusline #bbbbbb
-	}
-	font pango:JetBrains Mono bold 16px
-	position top
-	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
 }
 
 # open new terminal
@@ -67,8 +60,8 @@ bindsym $mod+b splith
 bindsym $mod+w kill
 
 # Audio control
-bindsym XF86AudioLowerVolume exec pamixer --decrease 5
-bindsym XF86AudioRaiseVolume exec pamixer --increase 5
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # Media control
 bindsym XF86AudioPlay exec playerctl play-pause
