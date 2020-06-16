@@ -1,0 +1,23 @@
+* {
+	font-family: JetBrains Mono;
+	font-size: 16px;
+	color: #bbbbbb;
+}
+
+#waybar {
+	background: #181818;
+}
+
+#workspaces button {
+	border-radius: 0;
+	padding: 0px 4px;
+	background: none;
+}
+
+#workspaces button.focused {
+	background: #333333;
+}
+
+#pulseaudio, #network, #cpu, #memory, #temperature, #backlight, #battery, #clock {
+	margin: 0px 8px;
+}
