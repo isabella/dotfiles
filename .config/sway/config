@@ -5,31 +5,26 @@ set $left h
 set $down j
 set $up k
 set $right l
+ 
+# Quit Sway
+bindsym $mod+q exec swaymsg exit
 
-# # Quit Sway
-# bindsym $mod+q exec swaymsg exit
-# 
-# output DP-1 {
-#   resolution 3840x2160 scale 1.5
-# }
-# 
-# # lock
-# bindsym $mod+Escape exec swaylock
-# exec swayidle -w \
-#    timeout 300 "swaylock --daemonize --font='JetBrains Mono' --ignore-empty-password --image=~/wallpaper.png --indicator-x-position=2560 --indicator-y-position=2100" \
-#    timeout 300 'sway "output * dpms off"' \
-#         resume 'sway "output * dpms on"
-# 
-# input type:touchpad {
-#   natural_scroll enabled
-# }
+output * {
+	resolution 3840x2160 scale 1.5
+	bg #000000 solid_color
+}
 
-# Quit i3
-bindsym $mod+q exec i3 exit
+input type:touchpad {
+	natural_scroll enabled
+	scroll_factor 0.6
+}
 
 # lock
-bindsym $mod+Escape exec i3lock -c 000000
-# exec xautolock -time 5 -locker "i3lock -c 000000"
+bindsym $mod+Escape exec swaylock
+exec swayidle -w \
+	timeout 300 swaylock \
+	timeout 300 'sway "output * dpms off"' \
+	resume 'sway "output * dpms on"'
 
 # open a new terminal on startup
 exec $term
@@ -39,24 +34,32 @@ bindsym $mod+Return exec $menu
 
 default_border pixel
 
+# xwayland hidpi support
+xwayland force scale 2
+exec xsettingsd
+
 #                       border  bg      text    indi    child
 client.focused          #000000 #000000 #000000 #054280 #054280
 client.focused_inactive #000000 #000000 #000000 #000000 #333333
 client.unfocused        #000000 #000000 #000000 #000000 #333333
 
+gaps {
+	inner 2
+}
+
 bar {
-  colors {
-    background #222222
-    focused_workspace #333333 #333333 #bbbbbb
-    statusline #bbbbbb
-  }
-  font pango:JetBrains Mono bold 24px
-  position top
-  status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
+	colors {
+		background #222222
+		focused_workspace #333333 #333333 #bbbbbb
+		statusline #bbbbbb
+	}
+	font pango:JetBrains Mono bold 16px
+	position top
+	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
 }
 
 # open new terminal
-bindsym $mod+t exec alacritty --working-directory=$(xcwd)
+bindsym $mod+t exec alacritty --working-directory=$(swaycwd)
 
 bindsym $mod+u focus parent
 bindsym $mod+v splitv

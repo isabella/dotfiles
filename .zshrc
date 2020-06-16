@@ -82,6 +82,7 @@ export PAGER="bat"
 export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PGUSER=postgres
+export MOZ_ENABLE_WAYLAND=1
 
 # conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
