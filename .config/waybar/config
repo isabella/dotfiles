@@ -5,16 +5,18 @@
 		"modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
 		"pulseaudio": {
 			"format": "🔊 {volume}%",
-			"format-muted": "🔇"
+			"format-muted": "🔇",
+			"on-click": "pavucontrol"
 		}, 
 		"network": {
 			"format-wifi": "📡 {essid} {signalStrength}%",
-			"format-ethernet": "🔗 {ifname} {ipaddr}"
+			"format-ethernet": "🔗 {ifname}"
 		},
 		"cpu": {
 			"format": "🖥️ {usage}%"
 		},
 		"clock": {
+			"interval": 1,
 			"format": "⏰ {:%Y-%m-%d %H:%M:%S}"
 		}
 }

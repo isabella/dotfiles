@@ -1,0 +1,15 @@
+#window {
+	background: #333333;
+	font-family: JetBrains Mono;
+}
+
+#input {
+	background: #333333;
+	border-radius: 0px;
+	border: none;
+}
+
+#entry:selected {
+	background: #0A84FF;
+	outline: none;
+}

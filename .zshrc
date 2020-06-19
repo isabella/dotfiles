@@ -33,6 +33,14 @@ bindkey -M vicmd '_' beginning-of-line
 # fix space issue with tab completion
 ZLE_REMOVE_SUFFIX_CHARS=""
 
+# use wayland clipboard
+function vi-yank-clipboard {
+   zle vi-yank
+   echo "$CUTBUFFER" | wl-copy -n
+}
+zle -N vi-yank-clipboard
+bindkey -M vicmd 'y' vi-yank-clipboard
+
 # ctrl f to clear screen
 bindkey ^f clear-screen
 bindkey -M vicmd ^f clear-screen
@@ -78,19 +86,20 @@ export EDITOR="vim"
 export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
+export MOZ_ENABLE_WAYLAND=1
+export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PAGER="bat"
 export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
-export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PGUSER=postgres
-export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_TYPE=wayland
 
 # conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # gpg
-gpg-agent --daemon &> /dev/null
 export GPG_TTY=$(tty)
-export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 # fzf
 export FZF_DEFAULT_OPTS="--reverse --exit-0 --select-1"
