@@ -2,6 +2,28 @@
 autoload -U colors && colors
 PS1="%{$fg[green]%}%m%{$reset_color%} %{$fg[blue]%}%c%{$reset_color%} %{$fg[red]%}$%{$reset_color%} "
 
+# enable vi mode
+bindkey -v
+
+zle_highlight=(region:bg=#333333;paste:bg=none)
+
+# set cursor based on keymap
+function zle-line-init {
+	print -n -- "\e[5 q"
+}
+function zle-keymap-select {
+	case $KEYMAP in
+		main) print -n -- "\e[5 q";;
+		vicmd) print -n -- "\e[0 q";;
+	esac
+}
+function zle-line-finish {
+	print -n -- "\e[0 q"
+}
+zle -N zle-line-init
+zle -N zle-line-finish
+zle -N zle-keymap-select
+
 # enable binding of ^s
 stty -ixon
 
@@ -16,9 +38,6 @@ stty intr \^d
 
 # ctrl q to eof
 stty eof \^q
-
-# enable vi mode
-bindkey -v
 
 # ctrl-a to go to beginning of line
 # ctrl-e to go to end of line
@@ -35,8 +54,8 @@ ZLE_REMOVE_SUFFIX_CHARS=""
 
 # use wayland clipboard
 function vi-yank-clipboard {
-   zle vi-yank
-   echo "$CUTBUFFER" | wl-copy -n
+	zle vi-yank
+	echo "$CUTBUFFER" | wl-copy -n
 }
 zle -N vi-yank-clipboard
 bindkey -M vicmd 'y' vi-yank-clipboard
@@ -89,7 +108,7 @@ export LESSHISTFILE=/dev/null
 export MOZ_ENABLE_WAYLAND=1
 export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PAGER="bat"
-export PATH="$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export PGUSER=postgres
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
@@ -108,10 +127,10 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_COMPLETION_TRIGGER=""
 export FZF_COMPLETION_OPTS="--reverse"
 _fzf_compgen_path() {
-  fd --hidden --no-ignore --follow --exclude ".git" . "$1"
+	fd --hidden --no-ignore --follow --exclude ".git" . "$1"
 }
 _fzf_compgen_dir() {
-  fd --hidden --no-ignore --follow --exclude ".git" --type d . "$1"
+	fd --hidden --no-ignore --follow --exclude ".git" --type d . "$1"
 }
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh

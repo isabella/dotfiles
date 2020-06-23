@@ -53,7 +53,7 @@ key_bindings:
 mouse:
   url:
     launcher:
-      program: firefox-developer-edition
+      program: firefox
 
 visual_bell:
   duration: 0
