@@ -5,8 +5,6 @@ PS1="%{$fg[green]%}%m%{$reset_color%} %{$fg[blue]%}%c%{$reset_color%} %{$fg[red]
 # enable vi mode
 bindkey -v
 
-zle_highlight=(region:bg=#333333;paste:bg=none)
-
 # set cursor based on keymap
 function zle-line-init {
 	print -n -- "\e[5 q"
@@ -24,14 +22,11 @@ zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
 
+# set colors
+zle_highlight=(region:bg=#333333;paste:bg=none)
+
 # enable binding of ^s
 stty -ixon
-
-# enable binding of ^d
-# setopt ignoreeof
-
-# enable binding of ^q
-# unsetopt flowcontrol
 
 # ctrl d to interrupt
 stty intr \^d
@@ -51,14 +46,6 @@ bindkey -M vicmd '_' beginning-of-line
 
 # fix space issue with tab completion
 ZLE_REMOVE_SUFFIX_CHARS=""
-
-# use wayland clipboard
-function vi-yank-clipboard {
-	zle vi-yank
-	echo "$CUTBUFFER" | wl-copy -n
-}
-zle -N vi-yank-clipboard
-bindkey -M vicmd 'y' vi-yank-clipboard
 
 # ctrl f to clear screen
 bindkey ^f clear-screen
@@ -145,14 +132,11 @@ alias f=''
 alias g='rg'
 alias h='http'
 alias p='bat'
-alias q='exit'
-alias s='ls -a | xargs du -hs'
 alias t='fd'
 alias tree='exa -T'
 alias u='cd ..'
 alias loc='tokei -s code'
 alias hex='hexyl'
-alias irc='irssi'
 
 alias ga='git add --all'
 alias gbl='git branch -avv'
@@ -172,13 +156,13 @@ alias gstl='git stash list'
 alias gstp='git stash pop --quiet'
 alias gsts='git stash show -p'
 
-alias sb='./scripts/build'
-alias scl='./scripts/clean'
-alias sch='./scripts/check'
-alias sd='./scripts/dev'
-alias sf='./scripts/fmt'
-alias sl='./scripts/lint'
-alias st='./scripts/test'
+alias build='./scripts/build'
+alias clean='./scripts/clean'
+alias check='./scripts/check'
+alias dev='./scripts/dev'
+alias fmt='./scripts/fmt'
+alias lint='./scripts/lint'
+alias test='./scripts/test'
 
 function weather() {
 	curl -sSL http://wttr.in/$(echo "$@" | tr " " +)
