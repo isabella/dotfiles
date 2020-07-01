@@ -1,3 +1,4 @@
+aerc-git 0.4.0.r23.g8f1c6c4-1
 alacritty 0.4.3-1
 amd-ucode 20200519.8ba6fa6-1
 autoconf 2.69-7
@@ -7,11 +8,10 @@ bat 0.15.4-1
 binutils 2.34-5
 bison 3.6.4-1
 chromium 83.0.4103.116-1
-deno-bin 1.1.1-1
-dropbox 99.4.501-1
+deno-bin 1.1.2-1
+dropbox 100.4.409-1
 dropbox-cli 2020.03.04-1
 efibootmgr 17-1
-esbuild-git r684.15b01c6-1
 eslint 7.3.1-1
 exa 0.9.0-1
 fakeroot 1.24-2
@@ -97,7 +97,7 @@ whois 5.5.6-1
 wl-clipboard 1:2.0.0-1
 wofi 1.1.2-2
 yarn 1.22.4-1
-yay-bin 10.0.1-1
+yay-bin 10.0.2-1
 yubikey-manager 3.1.1-1
 zip 3.0-9
 zsa-wally 1.1.1-1
