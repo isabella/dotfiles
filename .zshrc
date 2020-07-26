@@ -93,12 +93,9 @@ export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
 export MOZ_ENABLE_WAYLAND=1
-export NODE_PATH=/usr/lib/node_modules:/usr/lib/node_modules/@tangramhq/eslint-plugin/node_modules
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export PGUSER=postgres
-export XDG_CURRENT_DESKTOP=sway
-export XDG_SESSION_TYPE=wayland
 
 # conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
@@ -137,6 +134,7 @@ alias tree='exa -T'
 alias u='cd ..'
 alias loc='tokei -s code'
 alias hex='hexyl'
+alias hs='caddy file-server -listen localhost:8080 -root dist'
 
 alias ga='git add --all'
 alias gbl='git branch -avv'
@@ -159,6 +157,7 @@ alias gsts='git stash show -p'
 alias build='./scripts/build'
 alias clean='./scripts/clean'
 alias check='./scripts/check'
+alias deploy='./scripts/deploy'
 alias dev='./scripts/dev'
 alias fmt='./scripts/fmt'
 alias lint='./scripts/lint'
@@ -171,3 +170,10 @@ function weather() {
 function cheat() {
 	curl -sSL http://cheat.sh/$(echo "$@" | tr " " +)
 }
+
+function startw() {
+	export XDG_CURRENT_DESKTOP=sway
+	export XDG_SESSION_TYPE=wayland
+	sway --my-next-gpu-wont-be-nvidia
+}
+

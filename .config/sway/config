@@ -5,9 +5,9 @@ set $left h
 set $down j
 set $up k
 set $right l
- 
+
 # Quit Sway
-bindsym $mod+q exec swaymsg exit
+bindsym $mod+Shift+q exec swaymsg exit
 
 output * {
 	resolution 3840x2160 scale 1.5
@@ -52,12 +52,13 @@ gaps {
 }
 
 # open new terminal
-bindsym $mod+t exec alacritty --working-directory=$(swaycwd)
+bindsym $mod+t exec alacritty --working-directory="$(swaycwd)"
 
 bindsym $mod+u focus parent
 bindsym $mod+v splitv
 bindsym $mod+b splith
-bindsym $mod+w kill
+bindsym $mod+g layout toggle split
+bindsym $mod+q kill
 
 # Audio control
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%

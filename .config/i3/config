@@ -6,7 +6,7 @@ set $up k
 set $right l
  
 # Quit i3
-bindsym $mod+q exec i3 exit
+bindsym $mod+Shift+q exec i3 exit
 
 # open a new terminal on startup
 exec $term
