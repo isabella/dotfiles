@@ -55,6 +55,6 @@ mouse:
     launcher:
       program: firefox
 
-visual_bell:
+bell:
   duration: 0
 

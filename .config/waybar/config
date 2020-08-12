@@ -2,7 +2,7 @@
 	"layer": "top",
 		"modules-left": ["sway/workspaces", "sway/mode"],
 		"modules-center": ["sway/window"],
-		"modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "battery", "clock"],
+		"modules-right": ["backlight", "battery", "pulseaudio", "network", "clock"],
 		"pulseaudio": {
 			"format": "🔊 {volume}%",
 			"format-muted": "🔇",
@@ -11,9 +11,6 @@
 		"network": {
 			"format-wifi": "📡 {essid} {signalStrength}%",
 			"format-ethernet": "🔗 {ifname}"
-		},
-		"cpu": {
-			"format": "🖥️ {usage}%"
 		},
 		"clock": {
 			"interval": 1,
