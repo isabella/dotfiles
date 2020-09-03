@@ -132,8 +132,6 @@ alias p='bat'
 alias t='fd'
 alias tree='exa -T'
 alias u='cd ..'
-alias loc='tokei -s code'
-alias hex='hexyl'
 alias hs='caddy run --adapter caddyfile --config ~/.hs'
 alias mail='aerc'
 

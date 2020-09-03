@@ -53,7 +53,7 @@ key_bindings:
 mouse:
   url:
     launcher:
-      program: firefox
+      program: chromium
 
 bell:
   duration: 0
