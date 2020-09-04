@@ -48,7 +48,7 @@ imagemagick 7.0.10.28-1
 imv 4.1.0-2
 libpipewire02 0.2.7-1
 libtool 2.4.6+42+gb88cebd5-14
-libva-mesa-driver 20.1.6-1
+libva-mesa-driver 20.1.7-1
 libva-utils 2.8.0-1
 linux 5.8.5.arch1-1
 linux-firmware 20200817.7a30af1-1
@@ -81,6 +81,7 @@ python 3.8.5-1
 python-pip 20.1.1-1
 qt5-wayland 5.15.0-1
 ripgrep 12.1.1-1
+rofi 1.5.4-2
 rsync 3.2.3-1
 ruby 2.7.1-3
 rustup 1.22.1-1
@@ -98,7 +99,7 @@ tmux 3.1_b-1
 tokei 12.0.4-1
 ttf-jetbrains-mono 2.001-1
 unzip 6.0-14
-vim 8.2.1537-1
+vim 8.2.1584-1
 visual-studio-code-bin 1.48.2-1
 wasm-bindgen-bin 0.2.67-1
 watchexec 1.14.0-1
@@ -112,6 +113,7 @@ whois 5.5.6-2
 wl-clipboard 1:2.0.0-2
 wofi 1.2.2-1
 wrk 4.1.0-4
+xcwd-git 20200628-1
 xorg-xinit 1.4.1-2
 xorg-xinput 1.6.3-2
 xsv-bin 0.13.0-2
