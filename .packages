@@ -1,128 +1,131 @@
-aerc-git 0.4.0.r23.g8f1c6c4-1
-alacritty 0.5.0-1
-amd-ucode 20200817.7a30af1-1
-autoconf 2.69-7
-automake 1.16.2-3
-base 2-2
-bat 0.15.4-1
-binaryen 1:96-2
-bind 9.16.6-1
-binutils 2.35-2
-bison 3.6.4-1
-chromium 85.0.4183.83-1
-clang 10.0.1-1
-cmake 3.18.2-1
-cordless-git 2020.06.30-1
-deno-bin 1.3.0-1
-dosfstools 4.1-3
-dropbox 104.4.175-1
-dropbox-cli 2020.03.04-2
-efibootmgr 17-1
-exa 0.9.0-2
-fakeroot 1.24-2
-fd 8.1.1-1
-file 5.39-1
-findutils 4.7.0-2
-firefox 80.0.1-1
-flex 2.6.4-3
-fzf 0.22.0-1
-gawk 5.1.0-1
-gcc 10.2.0-2
-gdb 9.2-1
-gettext 0.21-1
-git 2.28.0-1
-git-delta-bin 0.4.1-2
-github-cli-bin 0.11.1-1
-go 2:1.15.1-1
-grep 3.4-1
-grim 1.3.1-1
-groff 1.22.4-3
-gzip 1.10-3
-hexyl 0.8.0-1
-htop 3.0.1-1
-httpie 2.2.0-2
-hyperfine 1.10.0-2
-i2c-tools 4.1-5
-i3-wm 4.18.2-2
-imagemagick 7.0.10.28-1
-imv 4.1.0-2
-libpipewire02 0.2.7-1
-libtool 2.4.6+42+gb88cebd5-14
-libva-mesa-driver 20.1.7-1
-libva-utils 2.8.0-1
-linux 5.8.5.arch1-1
-linux-firmware 20200817.7a30af1-1
-lld 10.0.1-1
-m4 1.4.18-3
-make 4.3-3
-mako 1.4.1-2
-man-db 2.9.3-1
-miniconda3 4.8.3-2
-networkmanager 1.26.2-1
-nodejs 14.9.0-1
-noto-fonts-emoji 20200720-1
-npm 6.14.8-1
-nvidia 450.66-16
-nvtop 1.0.0-2
-openmp 10.0.1-1
-openrgb-git r914.2251feb-1
-openssh 8.3p1-4
-pacman 5.2.2-1
-patch 2.7.6-8
-pavucontrol 1:4.0-2
-perf 5.7-1
-php 7.4.10-1
-pkgconf 1.7.3-1
-polkit 0.117-1
-postgresql 12.4-1
-pulseaudio 13.0-3
-pup-bin 0.4.0-1
-python 3.8.5-1
-python-pip 20.1.1-1
-qt5-wayland 5.15.0-1
-ripgrep 12.1.1-1
-rofi 1.5.4-2
-rsync 3.2.3-1
-ruby 2.7.1-3
-rustup 1.22.1-1
-sed 4.8-1
-slurp 1.2.0-2
-spotify-tui-bin 0.21.0-1
-sqlite 3.33.0-2
-sway-hidpi-git r6478.2c769232-1
-swaycwd 1.0-1
-swayidle 1.6-1
-swaylock 1.5-1
-tailscale-bin 1.0.5-1
-texinfo 6.7-3
-tmux 3.1_b-1
-tokei 12.0.4-1
-ttf-jetbrains-mono 2.001-1
-unzip 6.0-14
-vim 8.2.1584-1
-visual-studio-code-bin 1.48.2-1
-wasm-bindgen-bin 0.2.67-1
-watchexec 1.14.0-1
-waybar 0.9.3-3
-wayvnc 0.2.0-2
-wdisplays 1.0-2
-wf-recorder 0.2.1-1
-wget 1.20.3-3
-which 2.21-5
-whois 5.5.6-2
-wl-clipboard 1:2.0.0-2
-wofi 1.2.2-1
-wrk 4.1.0-4
-xcwd-git 20200628-1
-xorg-xinit 1.4.1-2
-xorg-xinput 1.6.3-2
-xsv-bin 0.13.0-2
-yarn 1.22.5-1
-yay-bin 10.0.4-1
-ytop-bin 0.6.2-1
-yubikey-manager 3.1.1-1
-zathura 0.4.6-1
-zathura-pdf-mupdf 0.3.5-3
-zip 3.0-9
-zsa-wally-cli 1.1.1-2
-zsh 5.8-1
+aerc-git
+alacritty
+amd-ucode
+as31
+autoconf
+automake
+base
+bat
+binaryen
+bind
+binutils
+bison
+caddy-bin
+chromium
+clang
+cmake
+cordless-git
+deno-bin
+dosfstools
+dropbox
+dropbox-cli
+efibootmgr
+exa
+fakeroot
+fd
+file
+findutils
+firefox
+flex
+fzf
+gawk
+gcc
+gdb
+gettext
+git
+git-delta-bin
+github-cli-bin
+go
+grep
+grim
+groff
+gzip
+hexyl
+htop
+httpie
+hyperfine
+i2c-tools
+i3-wm
+imagemagick
+imv
+libpipewire02
+libtool
+libva-mesa-driver
+libva-utils
+linux
+linux-firmware
+lld
+m4
+make
+mako
+man-db
+miniconda3
+networkmanager
+nodejs
+noto-fonts-emoji
+npm
+nvidia
+nvtop
+openmp
+openrgb-git
+openssh
+pacman
+patch
+pavucontrol
+perf
+php
+pkgconf
+polkit
+postgresql
+pulseaudio
+pup-bin
+python
+python-pip
+qt5-wayland
+ripgrep
+rofi
+rsync
+ruby
+rustup
+sed
+slurp
+spotify-tui-bin
+sqlite
+sway-hidpi-git
+swaycwd
+swayidle
+swaylock
+tailscale-bin
+texinfo
+tmux
+tokei
+trash-cli
+ttf-jetbrains-mono
+unzip
+vim
+visual-studio-code-bin
+vlc
+wasm-bindgen-bin
+watchexec
+waybar
+wdisplays
+wf-recorder
+wget
+which
+whois
+wl-clipboard
+wofi
+wrk
+xcwd-git
+xorg-xinit
+xorg-xinput
+xsv-bin
+yarn
+yay-bin
+ytop-bin
+yubikey-manager
+zathura
+zathura-pdf-mupdf
+zip
+zsa-wally-cli
+zsh
