@@ -18,7 +18,6 @@ cordless-git
 deno-bin
 dosfstools
 dropbox
-dropbox-cli
 efibootmgr
 exa
 fakeroot
@@ -34,7 +33,7 @@ gdb
 gettext
 git
 git-delta-bin
-github-cli-bin
+github-cli
 go
 grep
 grim
