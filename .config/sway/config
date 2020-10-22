@@ -8,7 +8,7 @@ set $right l
 bindsym $mod+Shift+q exec swaymsg exit
 
 # reload config
-bindsym $mod+r reload
+bindsym $mod+Shift+r reload
 
 # close window
 bindsym $mod+q kill
@@ -63,17 +63,16 @@ bindsym $mod+g exec chromium
 
 # layout control
 bindsym $mod+u focus parent
+bindsym $mod+Shift+u focus child
 bindsym $mod+v splitv
 bindsym $mod+b splith
 bindsym $mod+s layout toggle split
 
 # audio control
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-
-# media control
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
 # change the current focus
 bindsym $mod+$left focus left
@@ -88,10 +87,10 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
 # resize the current focus
-bindsym $mod+Ctrl+$left resize shrink width 20px
-bindsym $mod+Ctrl+$down resize grow height 20px
-bindsym $mod+Ctrl+$up resize shrink height 20px
-bindsym $mod+Ctrl+$right resize grow width 20px
+bindsym $mod+Ctrl+$left resize shrink width 25
+bindsym $mod+Ctrl+$down resize grow height 25
+bindsym $mod+Ctrl+$up resize shrink height 25
+bindsym $mod+Ctrl+$right resize grow width 25
 
 # make the current focus fullscreen
 bindsym $mod+f fullscreen

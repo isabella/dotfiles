@@ -176,3 +176,12 @@ function startw() {
 	sway --my-next-gpu-wont-be-nvidia
 }
 
+# lazy load nvm
+for command in "nvm" "node" "npm" "npx"; do
+	eval "function $command() {
+		unset -f $command > /dev/null 2>&1
+		source /usr/share/nvm/init-nvm.sh
+		$command \$@
+	}"
+done
+
