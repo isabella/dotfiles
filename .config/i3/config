@@ -18,7 +18,7 @@ exec alacritty
 
 bar {
 	position top
-	font pango:JetBrains Mono bold 24px
+	font pango:JetBrainsMono Nerd Font bold 24px
 	colors {
 		background #222222
 		focused_workspace #333333 #333333 #bbbbbb
@@ -34,7 +34,7 @@ client.unfocused        #000000 #000000 #000000 #000000 #333333
 default_border pixel
 
 # show menu
-bindsym $mod+Return exec rofi -show run -theme Monokai -font "JetBrains Mono 16"
+bindsym $mod+Return exec rofi -show run -theme Monokai -font "JetBrainsMono Nerd Font 16"
 
 # new terminal
 bindsym $mod+t exec alacritty --working-directory=$(xcwd)
