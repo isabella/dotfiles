@@ -1,7 +1,6 @@
 aerc-git
 alacritty
 amd-ucode
-as31
 autoconf
 automake
 base
@@ -10,6 +9,7 @@ binaryen
 bind
 binutils
 bison
+browsh-bin
 caddy-bin
 chromium
 clang
@@ -17,6 +17,7 @@ cmake
 cordless-git
 deno-bin
 docker
+dog-dns-bin
 dosfstools
 dropbox
 efibootmgr
@@ -44,7 +45,6 @@ hexyl
 htop
 httpie
 hyperfine
-i2c-tools
 i3-wm
 imagemagick
 imv
@@ -60,11 +60,13 @@ make
 mako
 man-db
 miniconda3
+musl
 nerd-fonts-jetbrains-mono
 networkmanager
+nodejs
 noto-fonts-emoji
+npm
 nvidia
-nvm
 nvtop
 openmp
 openrgb-git
@@ -89,6 +91,7 @@ ruby
 rustup
 sed
 slurp
+spacenavd
 spotify-tui-bin
 sqlite
 starship-bin
@@ -104,6 +107,8 @@ tokei
 trash-cli
 unzip
 vim
+virtualbox
+virtualbox-guest-iso
 visual-studio-code-bin
 vlc
 wasm-bindgen-bin

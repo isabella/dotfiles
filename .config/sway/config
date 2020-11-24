@@ -39,11 +39,25 @@ exec swayidle -w \
 	resume 'swaymsg "output * dpms on"'
 
 # start waybar on startup
-exec waybar
+# exec waybar
 
-# xwayland hidpi
+# bar
+bar {
+	colors {
+		background #222222
+		focused_workspace #333333 #333333 #bbbbbb
+		statusline #bbbbbb
+	}
+	font pango:JetBrainsMono Nerd Font bold 16px
+	position top
+	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
+}
+
+
+# xwayland
 xwayland force scale 2
 exec xsettingsd
+# xwayland disable
 
 #                       border  bg      text    indi    child
 client.focused          #000000 #000000 #000000 #054280 #054280

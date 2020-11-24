@@ -95,7 +95,6 @@ export EDITOR="vim"
 export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
-export MOZ_ENABLE_WAYLAND=1
 export PAGER="bat"
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export PGUSER=postgres
@@ -180,15 +179,8 @@ function csv() {
 function startw() {
 	export XDG_CURRENT_DESKTOP=sway
 	export XDG_SESSION_TYPE=wayland
+	export QT_SCALE_FACTOR=2
+	export MOZ_ENABLE_WAYLAND=1
 	sway --my-next-gpu-wont-be-nvidia
 }
-
-# lazy load nvm
-for command in "nvm" "node" "npm" "npx"; do
-	eval "function $command() {
-		unset -f $command > /dev/null 2>&1
-		source /usr/share/nvm/init-nvm.sh
-		$command \$@
-	}"
-done
 
