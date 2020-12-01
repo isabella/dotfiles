@@ -95,7 +95,6 @@ export EDITOR="vim"
 export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
-export PAGER="bat"
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
 export PGUSER=postgres
 
