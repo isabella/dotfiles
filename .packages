@@ -14,10 +14,9 @@ caddy-bin
 chromium
 clang
 cmake
-cordless-git
+cordless-bin
 deno-bin
 docker
-dog-dns-bin
 dosfstools
 dropbox
 efibootmgr
@@ -48,7 +47,6 @@ hyperfine
 i3-wm
 imagemagick
 imv
-libpipewire02
 libtool
 libva-mesa-driver
 libva-utils
@@ -64,10 +62,11 @@ musl
 nerd-fonts-jetbrains-mono
 networkmanager
 nodejs
+noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 npm
 nvidia
-nvtop
 openmp
 openrgb-git
 openssh
@@ -92,9 +91,7 @@ rustup
 sed
 slurp
 spacenavd
-spotify-tui-bin
 sqlite
-starship-bin
 sway-hidpi-git
 swaycwd
 swayidle
@@ -111,7 +108,6 @@ virtualbox
 virtualbox-guest-iso
 visual-studio-code-bin
 vlc
-wasm-bindgen-bin
 watchexec
 waybar-git
 wdisplays
