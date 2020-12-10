@@ -9,7 +9,6 @@ binaryen
 bind
 binutils
 bison
-browsh-bin
 caddy-bin
 chromium
 clang
@@ -68,7 +67,6 @@ noto-fonts-emoji
 npm
 nvidia
 openmp
-openrgb-git
 openssh
 pacman
 patch
@@ -109,14 +107,13 @@ virtualbox-guest-iso
 visual-studio-code-bin
 vlc
 watchexec
-waybar-git
 wdisplays
 wf-recorder
 wget
 which
 whois
 wl-clipboard
-wofi-hg
+wofi
 wrk
 xcwd-git
 xorg-xinit
