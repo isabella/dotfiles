@@ -16,9 +16,9 @@ cmake
 cordless-bin
 deno-bin
 docker
-dosfstools
 dropbox
 efibootmgr
+elixir
 exa
 fakeroot
 fd
@@ -46,9 +46,8 @@ hyperfine
 i3-wm
 imagemagick
 imv
+just-bin
 libtool
-libva-mesa-driver
-libva-utils
 linux
 linux-firmware
 lld
@@ -65,7 +64,6 @@ noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
-nvidia
 openmp
 openssh
 pacman
@@ -86,6 +84,7 @@ rofi
 rsync
 ruby
 rustup
+sd
 sed
 slurp
 spacenavd
@@ -95,17 +94,13 @@ swaycwd
 swayidle
 swaylock
 tailscale-bin
-texinfo
 time
 tmux
 tokei
 trash-cli
 unzip
 vim
-virtualbox
-virtualbox-guest-iso
 visual-studio-code-bin
-vlc
 watchexec
 wdisplays
 wf-recorder
@@ -122,8 +117,6 @@ xsv-bin
 yay-bin
 ytop-bin
 yubikey-manager
-zathura
-zathura-pdf-mupdf
 zip
 zsa-wally-cli
 zsh
