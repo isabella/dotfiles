@@ -43,7 +43,6 @@ hexyl
 htop
 httpie
 hyperfine
-i3-wm
 imagemagick
 imv
 just-bin
@@ -80,15 +79,14 @@ python
 python-pip
 qt5-wayland
 ripgrep
-rofi
 rsync
 ruby
 rustup
 sd
 sed
 slurp
-spacenavd
 sqlite
+sudo
 sway-hidpi-git
 swaycwd
 swayidle
@@ -99,6 +97,7 @@ tmux
 tokei
 trash-cli
 unzip
+vi
 vim
 visual-studio-code-bin
 watchexec
@@ -110,9 +109,6 @@ whois
 wl-clipboard
 wofi
 wrk
-xcwd-git
-xorg-xinit
-xorg-xinput
 xsv-bin
 yay-bin
 ytop-bin
