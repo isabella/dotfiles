@@ -1,3 +1,4 @@
+1password-bin
 aerc-git
 alacritty
 amd-ucode
@@ -5,6 +6,7 @@ autoconf
 automake
 base
 bat
+bc
 binaryen
 bind
 binutils
@@ -34,6 +36,7 @@ gettext
 git
 git-delta-bin
 github-cli
+gnome-keyring
 go
 grep
 grim
@@ -45,6 +48,8 @@ httpie
 hyperfine
 imagemagick
 imv
+interception-caps2esc-nocaps-git
+jq
 just-bin
 libtool
 linux
@@ -58,12 +63,12 @@ miniconda3
 musl
 nerd-fonts-jetbrains-mono
 networkmanager
-nodejs
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 npm
 openmp
+openrgb
 openssh
 pacman
 patch
@@ -83,15 +88,16 @@ rsync
 ruby
 rustup
 sd
+seahorse
 sed
 slurp
 sqlite
 sudo
-sway-hidpi-git
+sway
 swaycwd
 swayidle
 swaylock
-tailscale-bin
+tailscale
 time
 tmux
 tokei
@@ -99,7 +105,7 @@ trash-cli
 unzip
 vi
 vim
-visual-studio-code-bin
+visual-studio-code-wayland
 watchexec
 wdisplays
 wf-recorder
@@ -109,6 +115,7 @@ whois
 wl-clipboard
 wofi
 wrk
+xdg-desktop-portal-wlr-git
 xsv-bin
 yay-bin
 ytop-bin

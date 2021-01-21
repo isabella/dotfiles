@@ -34,8 +34,8 @@ stty -ixon
 # ctrl d to interrupt
 stty intr \^d
 
-# ctrl q to eof
-stty eof \^q
+# ctrl q to quit
+stty quit \^q
 
 # ctrl-a to go to beginning of line
 # ctrl-e to go to end of line
@@ -178,8 +178,7 @@ function csv() {
 function startw() {
 	export XDG_CURRENT_DESKTOP=sway
 	export XDG_SESSION_TYPE=wayland
-	export QT_SCALE_FACTOR=2
 	export MOZ_ENABLE_WAYLAND=1
-	sway --my-next-gpu-wont-be-nvidia
+	sway
 }
 

@@ -55,9 +55,9 @@ bar {
 
 
 # xwayland
-xwayland force scale 2
-exec xsettingsd
-# xwayland disable
+# xwayland force scale 2
+# exec xsettingsd
+xwayland disable
 
 #                       border  bg      text    indi    child
 client.focused          #000000 #000000 #000000 #054280 #054280
