@@ -2,9 +2,6 @@
 autoload -U colors && colors
 PS1="%{$fg[green]%}%m%{$reset_color%} %{$fg[blue]%}%c%{$reset_color%} %{$fg[red]%}$%{$reset_color%} "
 
-# prompt
-# eval "$(starship init zsh)"
-
 # enable vi mode
 bindkey -v
 

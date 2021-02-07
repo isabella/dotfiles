@@ -11,7 +11,10 @@ bindsym $mod+Shift+q exec swaymsg exit
 bindsym $mod+Shift+r reload
 
 # close window
-bindsym $mod+q kill
+bindsym $mod+w kill
+
+# kill process
+bindsym $mod+q exec swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid' | kill
 
 # open a new terminal on startup
 exec alacritty
@@ -38,9 +41,6 @@ exec swayidle -w \
 	timeout 360 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"'
 
-# start waybar on startup
-# exec waybar
-
 # bar
 bar {
 	colors {
@@ -48,15 +48,12 @@ bar {
 		focused_workspace #333333 #333333 #bbbbbb
 		statusline #bbbbbb
 	}
-	font pango:JetBrainsMono Nerd Font bold 16px
+	font 16px
 	position top
 	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
 }
 
-
 # xwayland
-# xwayland force scale 2
-# exec xsettingsd
 xwayland disable
 
 #                       border  bg      text    indi    child
@@ -68,12 +65,14 @@ default_border pixel
 # show menu
 bindsym $mod+Return exec wofi --show run
 
-# alacritty
-bindsym $mod+t exec alacritty --working-directory="$(swaycwd)"
+# browser
+bindsym $mod+g exec chromium
 # code
 bindsym $mod+c exec code
-# chromium
-bindsym $mod+g exec chromium
+# files
+bindsym $mod+r exec nautilus -w $(swaycwd)
+# terminal
+bindsym $mod+t exec alacritty --working-directory="$(swaycwd)"
 
 # layout control
 bindsym $mod+u focus parent
