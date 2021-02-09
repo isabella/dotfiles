@@ -1,4 +1,3 @@
-aerc-git
 alacritty
 amd-ucode
 autoconf
@@ -16,7 +15,6 @@ caddy-bin
 chromium
 clang
 cmake
-cordless-bin
 deno-bin
 docker
 dropbox
