@@ -1,24 +1,26 @@
+# Set some variables.
 set $mod mod4
 set $left h
 set $down j
 set $up k
 set $right l
 
-# quit
+# Exit Sway.
 bindsym $mod+Shift+q exec swaymsg exit
 
-# reload config
+# Reload the config.
 bindsym $mod+Shift+r reload
 
-# close window
+# Close the focused window.
 bindsym $mod+w kill
 
-# kill process
+# Kill the process of the focused window.
 bindsym $mod+q exec swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid' | xargs kill
 
-# open a new terminal on startup
+# Open a new terminal on startup.
 exec alacritty
 
+# Configure the output.
 output * {
 	resolution 3840x2160 scale 1.5
 	bg #000000 solid_color
@@ -29,19 +31,22 @@ gaps {
 	inner 2
 }
 
+# Make sure the window under the cursor is always focused.
+focus_follows_mouse always
+
 input type:touchpad {
 	natural_scroll enabled
 	scroll_factor 0.6
 }
 
-# lock
+# Lock the screen automatically.
 bindsym $mod+Escape exec swaylock
 exec swayidle -w \
 	timeout 300 swaylock \
 	timeout 360 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"'
 
-# bar
+# Configure the top bar.
 bar {
 	colors {
 		background #222222
@@ -53,7 +58,7 @@ bar {
 	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
 }
 
-# xwayland
+# Disable xwayland!
 xwayland disable
 
 #                       border  bg      text    indi    child
@@ -62,57 +67,51 @@ client.focused_inactive #000000 #000000 #000000 #000000 #333333
 client.unfocused        #000000 #000000 #000000 #000000 #333333
 default_border pixel
 
-# show menu
 bindsym $mod+Return exec wofi --show run
-
-# browser
-bindsym $mod+g exec chromium
-# code
 bindsym $mod+c exec code
-# files
+bindsym $mod+g exec chromium
 bindsym $mod+r exec nautilus -w $(swaycwd)
-# terminal
 bindsym $mod+t exec alacritty --working-directory="$(swaycwd)"
 
-# layout control
+# Layout control.
 bindsym $mod+u focus parent
 bindsym $mod+Shift+u focus child
 bindsym $mod+v splitv
 bindsym $mod+b splith
 bindsym $mod+s layout toggle split
 
-# audio control
+# Audio control.
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 
-# change the current focus
+# Move focus.
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
 
-# move the current focus
+# Move the focused container.
 bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 
-# resize the current focus
+# Resize the focused container.
 bindsym $mod+Ctrl+$left resize shrink width 25
 bindsym $mod+Ctrl+$down resize grow height 25
 bindsym $mod+Ctrl+$up resize shrink height 25
 bindsym $mod+Ctrl+$right resize grow width 25
 
-# make the current focus fullscreen
+# Make the focused container fullscreen.
 bindsym $mod+f fullscreen
 
-# make the current focus floating
+# Make the current focus floating.
 bindsym $mod+Shift+f floating toggle
 floating_modifier $mod
 
-# switch to workspace
+# Switch to the specified workspace.
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
@@ -124,7 +123,7 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-# move focused container to workspace
+# Move the focused container to the specified workspace.
 bindsym $mod+Shift+1 move container to workspace 1
 bindsym $mod+Shift+2 move container to workspace 2
 bindsym $mod+Shift+3 move container to workspace 3

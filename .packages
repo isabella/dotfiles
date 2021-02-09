@@ -46,7 +46,7 @@ grim
 groff
 gzip
 hexyl
-ht-bin
+ht
 htop
 hyperfine
 imagemagick
@@ -65,6 +65,7 @@ m4
 make
 mako
 man-db
+meson
 miniconda3
 mosh
 musl
@@ -115,9 +116,11 @@ vi
 vim
 vinagre
 visual-studio-code-wayland
+wasmtime-bin
 watchexec
 wayvnc
 wdisplays
+wev-git
 wf-recorder
 wget
 which
@@ -125,6 +128,7 @@ whois
 wl-clipboard
 wofi
 wrk
+wshowkeys-git
 xdg-desktop-portal-wlr-git
 xsv-bin
 ytop-bin
