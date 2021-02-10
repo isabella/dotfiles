@@ -3,6 +3,12 @@
 		"modules-left": ["sway/workspaces", "sway/mode"],
 		"modules-center": ["sway/window"],
 		"modules-right": ["backlight", "battery", "pulseaudio", "network", "clock"],
+		"backlight": {
+			"format": "🔆 {percent}%"
+		},
+		"battery": {
+			"format": "🔋 {capacity}%"
+		},
 		"pulseaudio": {
 			"format": "🔊 {volume}%",
 			"format-muted": "🔇",

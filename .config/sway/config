@@ -49,16 +49,17 @@ exec swayidle -w \
 	resume 'swaymsg "output * dpms on"'
 
 # Configure the top bar.
-bar {
-	colors {
-		background #222222
-		focused_workspace #333333 #333333 #bbbbbb
-		statusline #bbbbbb
-	}
-	font 16px
-	position top
-	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
-}
+exec waybar
+# bar {
+# 	colors {
+# 		background #222222
+# 		focused_workspace #333333 #333333 #bbbbbb
+# 		statusline #bbbbbb
+# 	}
+# 	font 16px
+# 	position top
+# 	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
+# }
 
 # Disable xwayland!
 xwayland disable
@@ -85,8 +86,11 @@ bindsym $mod+s layout toggle split
 # Audio control.
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86MonBrightnessUp exec brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
 
 # Move focus.
 bindsym $mod+$left focus left

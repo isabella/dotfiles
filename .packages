@@ -16,6 +16,7 @@ cmake
 deno-bin
 docker
 dropbox
+dropbox-cli
 efibootmgr
 elixir
 evince
@@ -23,6 +24,7 @@ evolution
 exa
 fd
 firefox
+fwupd
 fzf
 gdb
 git
@@ -67,6 +69,7 @@ pavucontrol
 perf
 php
 postgresql
+powertop
 pulseaudio
 pup-bin
 python
@@ -79,6 +82,7 @@ rustup
 sd
 seahorse
 slurp
+sof-firmware
 sqlite
 sway
 swaycwd
@@ -96,6 +100,7 @@ vinagre
 visual-studio-code-wayland
 wasmtime-bin
 watchexec
+waybar
 wayvnc
 wdisplays
 wev-git
