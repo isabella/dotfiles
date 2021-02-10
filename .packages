@@ -1,3 +1,4 @@
+acpi
 alacritty
 amd-ucode
 aws-cli
@@ -6,6 +7,7 @@ bat
 bc
 binaryen
 bind
+brightnessctl
 browsh-bin
 caddy-bin
 chromium
@@ -35,7 +37,9 @@ htop
 hyperfine
 imagemagick
 imv
+intel-ucode
 interception-caps2esc-nocaps-git
+interception-dual-function-keys
 jq
 just-bin
 libpipewire02
@@ -63,7 +67,6 @@ paru-bin
 pavucontrol
 perf
 php
-polkit
 postgresql
 pulseaudio
 pup-bin

@@ -22,7 +22,7 @@ exec alacritty
 
 # Configure the output.
 output * {
-	resolution 3840x2160 scale 1.5
+	scale 1.5
 	bg #000000 solid_color
 }
 
@@ -37,6 +37,7 @@ focus_follows_mouse always
 input type:touchpad {
 	natural_scroll enabled
 	scroll_factor 0.6
+	tap enabled
 }
 
 # Lock the screen automatically.
