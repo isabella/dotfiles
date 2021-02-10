@@ -16,7 +16,8 @@
 		}, 
 		"network": {
 			"format-wifi": "📡 {essid} {signalStrength}%",
-			"format-ethernet": "🔗 {ifname}"
+			"format-ethernet": "🔗 {ifname}",
+			"on-click": "nm-connection-editor"
 		},
 		"clock": {
 			"interval": 1,
