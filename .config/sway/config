@@ -38,6 +38,7 @@ input type:touchpad {
 	natural_scroll enabled
 	scroll_factor 0.6
 	tap enabled
+	dwt enabled
 }
 
 # Lock the screen automatically.
