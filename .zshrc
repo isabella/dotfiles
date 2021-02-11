@@ -132,7 +132,7 @@ alias tree='exa -T'
 alias u='cd ..'
 alias hs='caddy run --adapter caddyfile --config ~/.hs'
 alias mail='aerc'
-alias ht='ht-rs'
+alias ht='ht-rust'
 alias pm='paru'
 
 alias ga='git add --all'
