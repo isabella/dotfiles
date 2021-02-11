@@ -22,8 +22,15 @@ exec alacritty
 
 # Configure the output.
 output * {
-	scale 1.25
 	bg #000000 solid_color
+}
+
+output DP-1 {
+	scale 1.5
+}
+
+output eDP-1 {
+	scale 1.25
 }
 
 gaps {
