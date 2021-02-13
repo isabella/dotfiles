@@ -17,9 +17,6 @@ bindsym $mod+w kill
 # Kill the process of the focused window.
 bindsym $mod+q exec swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true).pid' | xargs kill
 
-# Open a new terminal on startup.
-exec alacritty
-
 # Configure the output.
 output * {
 	background ~/.config/sway/wallpaper.png fit #000000
@@ -62,7 +59,7 @@ exec waybar
 # 	font 16px
 # 	position top
 # 	status_command while date +"%Y-%m-%d %H:%M:%S"; do sleep 1; done
-# }
+#  }
 
 # Disable xwayland!
 xwayland disable
@@ -73,7 +70,12 @@ client.focused_inactive #000000 #000000 #000000 #000000 #333333
 client.unfocused        #000000 #000000 #000000 #000000 #333333
 default_border pixel
 
-bindsym $mod+Return exec wofi --show run
+# Launcher.
+#set $launcher alacritty --class launcher --command $SHELL -c "ls /usr/bin/ | fzf | xargs -r swaymsg exec"
+#for_window [app_id="launcher"] focus, floating enabled
+set $launcher wofi --show run
+bindsym $mod+Return exec $launcher
+
 bindsym $mod+c exec code
 bindsym $mod+g exec chromium
 bindsym $mod+r exec nautilus -w $(swaycwd)
