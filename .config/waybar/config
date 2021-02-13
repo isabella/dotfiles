@@ -2,25 +2,35 @@
 	"layer": "top",
 		"modules-left": ["sway/workspaces", "sway/mode"],
 		"modules-center": ["sway/window"],
-		"modules-right": ["backlight", "battery", "pulseaudio", "network", "clock"],
+		"modules-right": ["backlight", "battery", "pulseaudio", "network", "custom/whoami", "clock"],
 		"backlight": {
-			"format": "{percent}%"
+			"format": "{icon} {percent}%",
+			"format-icons": ["", "", "", ""]
 		},
 		"battery": {
-			"format": "{capacity}%"
+			"format-charging": "{icon} {capacity}%",
+			"format-discharging": "{icon} {capacity}%",
+			"format-icons": ["", "", "", "", "", "", "", "", "", ""]
 		},
 		"pulseaudio": {
-			"format": "\uF028 {volume}%",
-			"format-muted": "\uF026",
+			"format": "{icon} {volume}%",
+			"format-muted": "婢",
+			"format-icons": {
+				"headphone": "",
+				"default": ["", "墳"]
+			},
 			"on-click": "pavucontrol"
-		}, 
+		},
 		"network": {
-			"format-wifi": "\uF1EB {essid} {signalStrength}%",
-			"format-ethernet": "\uF127 {ifname}",
+			"format-wifi": "直 {essid}",
+			"format-ethernet": " {ifname}",
 			"on-click": "nm-connection-editor"
+		},
+		"custom/whoami": {
+			"exec": "echo -n ' ' && whoami"
 		},
 		"clock": {
 			"interval": 1,
-			"format": "\uF017 {:%Y-%m-%d %H:%M:%S}"
+			"format": " {:%Y-%m-%d %H:%M:%S}"
 		}
 }
