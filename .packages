@@ -1,17 +1,13 @@
-acpi
+aerc
 alacritty
 amd-ucode
-aws-cli
+aws-cli-v2-bin
 base
 bat
-bc
-binaryen
 bind
 brightnessctl
-browsh-bin
 caddy-bin
 chromium
-clang
 cmake
 deno-bin
 docker
@@ -24,8 +20,10 @@ evolution
 exa
 fd
 firefox
+fprintd
 fwupd
 fzf
+gcc
 gdb
 git
 git-delta-bin
@@ -34,7 +32,6 @@ gnome-keyring
 go
 grim
 hexyl
-ht
 htop
 hyperfine
 imagemagick
@@ -43,6 +40,7 @@ intel-ucode
 interception-dual-function-keys
 jq
 just-bin
+khal
 libpipewire02
 linode-cli
 linux
@@ -62,7 +60,6 @@ nm-connection-editor
 noto-fonts-cjk
 noto-fonts-emoji
 npm
-openmp
 openrgb
 openssh
 paru-bin
@@ -90,10 +87,9 @@ swaycwd
 swayidle
 swaylock
 tailscale
-time
+thunderbird
 tmux
 tokei
-trash-cli
 unzip
 vi
 vim
@@ -112,6 +108,7 @@ wl-clipboard
 wofi
 wrk
 xdg-desktop-portal-wlr-git
+xh
 xsv-bin
 ytop-bin
 yubikey-manager
