@@ -4,23 +4,23 @@
 		"modules-center": ["sway/window"],
 		"modules-right": ["backlight", "battery", "pulseaudio", "network", "clock"],
 		"backlight": {
-			"format": "🔆 {percent}%"
+			"format": "{percent}%"
 		},
 		"battery": {
-			"format": "🔋 {capacity}%"
+			"format": "{capacity}%"
 		},
 		"pulseaudio": {
-			"format": "🔊 {volume}%",
-			"format-muted": "🔇",
+			"format": "\uF028 {volume}%",
+			"format-muted": "\uF026",
 			"on-click": "pavucontrol"
 		}, 
 		"network": {
-			"format-wifi": "📡 {essid} {signalStrength}%",
-			"format-ethernet": "🔗 {ifname}",
+			"format-wifi": "\uF1EB {essid} {signalStrength}%",
+			"format-ethernet": "\uF127 {ifname}",
 			"on-click": "nm-connection-editor"
 		},
 		"clock": {
 			"interval": 1,
-			"format": "⏰ {:%Y-%m-%d %H:%M:%S}"
+			"format": "\uF017 {:%Y-%m-%d %H:%M:%S}"
 		}
 }

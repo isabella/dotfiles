@@ -22,7 +22,7 @@ exec alacritty
 
 # Configure the output.
 output * {
-	bg #000000 solid_color
+	background ~/.config/sway/wallpaper.png fit #000000
 }
 
 output DP-1 {

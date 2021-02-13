@@ -1,3 +1,7 @@
 color=000000FF
 daemonize
 ignore-empty-password
+image=~/.config/sway/wallpaper.png
+indicator-x-position=960
+indicator-y-position=996
+scaling=fit
