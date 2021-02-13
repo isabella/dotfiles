@@ -6,8 +6,6 @@ automake
 aws-cli-v2-bin
 base
 bat
-bc
-binaryen
 bind
 binutils
 bison
@@ -43,7 +41,6 @@ git-delta-bin
 github-cli
 gnome-keyring
 go
-greetd
 grep
 grim
 groff
@@ -115,14 +112,12 @@ tailscale
 texinfo
 tmux
 tokei
-ttf-fira-mono
 ufw
 unzip
 vi
 vim
 vinagre
 visual-studio-code-wayland
-w3m
 wasmtime-bin
 watchexec
 waybar
@@ -139,7 +134,6 @@ wrk
 xdg-desktop-portal-wlr-git
 xh
 xsv-bin
-ytop-bin
 yubikey-manager
 zip
 zsa-wally-cli

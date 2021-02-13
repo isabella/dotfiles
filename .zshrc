@@ -161,6 +161,10 @@ alias fmt='./scripts/fmt'
 alias lint='./scripts/lint'
 alias test='./scripts/test'
 
+function pmsave() {
+	pm -Qe | awk '{print $1}' > ~/.packages
+}
+
 function weather() {
 	curl -sSL http://wttr.in/$(echo "$@" | tr " " +)
 }
