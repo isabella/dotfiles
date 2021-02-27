@@ -70,16 +70,31 @@ client.focused_inactive #000000 #000000 #000000 #000000 #333333
 client.unfocused        #000000 #000000 #000000 #000000 #333333
 default_border pixel
 
+for_window [app_id="launcher"] focus, floating enabled
+
 # Launcher.
-#set $launcher alacritty --class launcher --command $SHELL -c "ls /usr/bin/ | fzf | xargs -r swaymsg exec"
-#for_window [app_id="launcher"] focus, floating enabled
-set $launcher wofi --show run
+set $launcher alacritty --class launcher --command $SHELL -c "ls /usr/bin/ | fzf | xargs -r swaymsg exec"
 bindsym $mod+Return exec $launcher
 
-bindsym $mod+c exec code
-bindsym $mod+g exec chromium
-bindsym $mod+r exec nautilus -w $(swaycwd)
+# Opener.
+set $opener alacritty --class launcher --command $SHELL -c "fd . $(swaycwd) | fzf | xargs -r swaymsg exec xdg-open"
+bindsym $mod+o exec $opener
+
 bindsym $mod+t exec alacritty --working-directory="$(swaycwd)"
+bindsym $mod+g exec firefox
+
+# Audio control.
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPrev exec playerctl prev
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+# Screenshots.
+bindsym $mod+p exec screenshot
 
 # Layout control.
 bindsym $mod+u focus parent
@@ -87,15 +102,6 @@ bindsym $mod+Shift+u focus child
 bindsym $mod+v splitv
 bindsym $mod+b splith
 bindsym $mod+s layout toggle split
-
-# Audio control.
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 # Move focus.
 bindsym $mod+$left focus left

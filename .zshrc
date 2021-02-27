@@ -5,6 +5,27 @@ PS1="%{$fg[green]%}%m%{$reset_color%} %{$fg[blue]%}%c%{$reset_color%} %{$fg[red]
 # enable vi mode
 bindkey -v
 
+# use the system clipboard
+function zsh-system-clipboard-vicmd-vi-yank() {
+	zle vi-yank
+	printf '%s' "$CUTBUFFER" | wl-copy
+}
+zle -N zsh-system-clipboard-vicmd-vi-yank
+bindkey -M vicmd 'y' zsh-system-clipboard-vicmd-vi-put
+function zsh-system-clipboard-vicmd-vi-put() {
+}
+zle -N zsh-system-clipboard-vicmd-vi-yank
+function zsh-system-clipboard-vicmd-vi-put-after() {
+	zsh-system-clipboard-vicmd-vi-put after
+}
+zle -N zsh-system-clipboard-vicmd-vi-put-after
+function zsh-system-clipboard-vicmd-vi-put-before() {
+	zsh-system-clipboard-vicmd-vi-put before
+}
+zle -N zsh-system-clipboard-vicmd-vi-put-before
+bindkey -M vicmd 'P' zsh-system-clipboard-vicmd-vi-put-before
+bindkey -M vicmd 'p' zsh-system-clipboard-vicmd-vi-put-after
+
 # set cursor based on keymap
 function zle-line-init {
 	print -n -- "\e[5 q"
@@ -22,7 +43,7 @@ zle -N zle-line-init
 zle -N zle-line-finish
 zle -N zle-keymap-select
 
-# set colors
+# set highlight colors
 zle_highlight=(region:bg=#333333;paste:bg=none)
 
 # enable binding of ^s
@@ -34,15 +55,16 @@ stty intr \^d
 # ctrl q to quit
 stty quit \^q
 
-# ctrl-a to go to beginning of line
-# ctrl-e to go to end of line
+# ctrl-a to go to the beginning of the line.
+# ctrl-e to go to the end of the line.
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
 bindkey -M vicmd '^a' beginning-of-line
 bindkey -M vicmd '^e' end-of-line
 
-# for some reason vi mode doesn't have '_' mapped to beginning of line
-bindkey -M vicmd '_' beginning-of-line
+# H and L to move to the beginning and end of a line.
+bindkey -M vicmd 'H' beginning-of-line
+bindkey -M vicmd 'L' end-of-line
 
 # fix space issue with tab completion
 ZLE_REMOVE_SUFFIX_CHARS=""
@@ -82,17 +104,20 @@ bindkey -M vicmd ^q exit_widget
 # history
 HISTSIZE=10000
 SAVEHIST=10000
-HISTFILE=$HOME/.zhistory
+HISTFILE=~/.zhistory
 setopt inc_append_history
 setopt share_history
 setopt extended_history
 
 # misc
-export EDITOR="vim"
+export BROWSER="firefox"
+export EDITOR="nvim"
 export GTK_THEME=Adwaita:dark
 export LESS="-R"
 export LESSHISTFILE=/dev/null
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.deno/bin:$PATH"
+export OPENER="xdg-open"
+export PASSWORD_STORE_DIR="~/.pass"
+export PATH="~/.local/bin:~/.cargo/bin:~/.deno/bin:~/.bin:$PATH"
 export PGUSER=postgres
 
 # conda
@@ -117,22 +142,29 @@ _fzf_compgen_dir() {
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 
+# less
+[ -f ~/.config/.lesskey ] && lesskey
+
+# lf
+[ -f ~/.config/lf/icons ] && source ~/.config/lf/icons
+
 # aliases
-alias dotfiles='git --git-dir $HOME/.dotfiles --work-tree $HOME'
+alias d='trash'
+alias dotfiles='git --git-dir ~/.dotfiles --work-tree ~/'
+alias e='nvim'
+alias f='lf'
+alias g='rg'
+alias hs='caddy run --adapter caddyfile --config ~/.hs'
+alias http='xh'
+alias mail='aerc'
+alias open='xdg-open'
+alias p='bat'
+alias pm='paru'
 alias rc='$EDITOR ~/.zshrc'
 alias src='source ~/.zshrc'
-alias d='trash'
-alias e='vim'
-alias f=''
-alias g='rg'
-alias p='bat'
 alias t='fd'
 alias tree='exa -T'
 alias u='cd ..'
-alias hs='caddy run --adapter caddyfile --config ~/.hs'
-alias mail='aerc'
-alias http='xh'
-alias pm='paru'
 
 alias ga='git add --all'
 alias gbl='git branch -avv'
@@ -152,17 +184,29 @@ alias gstl='git stash list'
 alias gstp='git stash pop --quiet'
 alias gsts='git stash show -p'
 
-alias build='./scripts/build'
-alias clean='./scripts/clean'
-alias check='./scripts/check'
-alias deploy='./scripts/deploy'
-alias dev='./scripts/dev'
-alias fmt='./scripts/fmt'
-alias lint='./scripts/lint'
-alias test='./scripts/test'
+# alias build='./scripts/build'
+# alias clean='./scripts/clean'
+# alias check='./scripts/check'
+# alias deploy='./scripts/deploy'
+# alias dev='./scripts/dev'
+# alias fmt='./scripts/fmt'
+# alias lint='./scripts/lint'
+# alias test='./scripts/test'
 
 function pmsave() {
 	pm -Qe | awk '{print $1}' > ~/.packages
+}
+
+function screencapture() {
+	wf-recorder -f screencapture_$(date +%s).mp4
+}
+
+function screenshot() {
+	grim -g "$(slurp)" screenshot_$(date +%s).png
+}
+
+function screencolor() {
+	grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-
 }
 
 function weather() {

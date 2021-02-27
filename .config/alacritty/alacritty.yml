@@ -44,8 +44,5 @@ key_bindings:
 mouse:
   url:
     launcher:
-      program: chromium
-
-bell:
-  duration: 0
+      program: firefox
 
