@@ -69,6 +69,7 @@ linux
 linux-firmware
 lld
 lm_sensors
+lvm2
 m4
 make
 mako
@@ -100,7 +101,6 @@ php
 pipewire-pulse
 pkgconf
 playerctl
-plymouth
 postgresql
 pup-bin
 python
@@ -134,7 +134,6 @@ unzip
 vi
 vim
 vinagre
-visual-studio-code-wayland
 w3m
 wasmtime-bin
 watchexec
